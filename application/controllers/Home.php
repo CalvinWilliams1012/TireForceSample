@@ -3,7 +3,7 @@
  * Home Controller for TireForce.
  * Home index page is the default page that is opened if no other page is found when entering the website.
  *	ie. http://www.websitename.com/tireforce/index.php -> if it can not find index it is sent here and the index function is loaded.
- *	@author Calvin Williams calvin.william1012@gmail.com
+ *	@author Calvin Williams <calvin.william1012@gmail.com>
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -28,6 +28,13 @@ class Home extends CI_Controller {
 		$data['bodys'] = $this->home->getBodys();
 		$data['others'] = $this->home->getOthers();
 		$this->load->view('home_view',$data);
+	}
+
+	public function search()
+	{
+		$data['title'] = 'Tire Search';
+		$data['tires'] = $this->home->search($this->input->post());
+		$this->load->view('search_view',$data);
 	}
 }
 

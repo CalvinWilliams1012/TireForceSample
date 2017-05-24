@@ -23,6 +23,7 @@ CREATE TABLE tires(
     size VARCHAR(20),
     partNum VARCHAR(20),
     description VARCHAR(200),
+    price int,
     PRIMARY KEY (id)
 );
 

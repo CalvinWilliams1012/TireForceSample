@@ -1,11 +1,11 @@
 /*
 Inserting tire data.
 */
-INSERT INTO tires VALUES(1,'TireBrand1','22 inches','XYZ42','TireBrand1 Description about tire XYZ42 and features');
-INSERT INTO tires VALUES(2,'TireBrand2','24 inches','XYZ412','TireBrand2 Description about tire XYZ412 and features');
-INSERT INTO tires VALUES(3,'TireBrand3','24 inches','XYZ4243','TireBrand3 Description about tire XYZ4243 and features');
-INSERT INTO tires VALUES(4,'TireBrand4','25 inches','XYZ42xs','TireBrand4 Description about tire XYZ42xs and features');
-INSERT INTO tires VALUES(5,'TireBrand1','23 inches','XYZ42vf','TireBrand1 Description about tire XYZ42vf and features');
+INSERT INTO tires VALUES(1,'TireBrand1','22 inches','XYZ42','TireBrand1 Description about tire XYZ42 and features',1000);
+INSERT INTO tires VALUES(2,'TireBrand2','24 inches','XYZ412','TireBrand2 Description about tire XYZ412 and features',400);
+INSERT INTO tires VALUES(3,'TireBrand3','24 inches','XYZ4243','TireBrand3 Description about tire XYZ4243 and features',223);
+INSERT INTO tires VALUES(4,'TireBrand4','25 inches','XYZ42xs','TireBrand4 Description about tire XYZ42xs and features',790);
+INSERT INTO tires VALUES(5,'TireBrand1','23 inches','XYZ42vf','TireBrand1 Description about tire XYZ42vf and features',600);
 
 /*
 Inserting vehicle data.
