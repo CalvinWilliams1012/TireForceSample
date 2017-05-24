@@ -3,6 +3,9 @@ SAMPLE DATABASE FOR TIREFORCE
 Database contains simple vehicle tire relation.
 @Author Calvin Williams
 */
+DROP TABLE vehicles;
+DROP TABLE tires;
+DROP TABLE tireVehicleRef;
 
 CREATE TABLE vehicles(
 	id int NOT NULL,
@@ -10,10 +13,8 @@ CREATE TABLE vehicles(
     make VARCHAR(20),
     model VARCHAR(20),
     body VARCHAR(20),
-    other VARCHAR(20),
-    tireID int NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (tireID) REFERENCES tires(id)
+    other VARCHAR(100),
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE tires(
@@ -23,4 +24,11 @@ CREATE TABLE tires(
     partNum VARCHAR(20),
     description VARCHAR(200),
     PRIMARY KEY (id)
+);
+
+CREATE TABLE tireVehicleRef(
+	vehicleID int,
+    tireID int,
+    FOREIGN KEY (vehicleID) REFERENCES vehicles(id),
+    FOREIGN KEY (tireID) REFERENCES tires(id)
 );
