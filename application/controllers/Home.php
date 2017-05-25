@@ -21,19 +21,36 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+		/**
+		 *
+		 * Gets all the values and puts them into the array,
+		 * Expensive in processing but easy to understand and implement.
+		 *
+		 */
+		
 		$data['title']= 'TireForce Sample';
 		$data['years'] = $this->home->getYears();
 		$data['makes'] = $this->home->getMakes();
 		$data['models'] = $this->home->getModels();
 		$data['bodys'] = $this->home->getBodys();
-		$data['others'] = $this->home->getOthers();
+		/*
+		 * Loads the view with the data from the model.
+		 */
 		$this->load->view('home_view',$data);
 	}
 
 	public function search()
 	{
+		/**
+		 *
+		 * Gets all the values in a single object,
+		 * Better for processing.
+		 */
 		$data['title'] = 'Tire Search';
 		$data['tires'] = $this->home->search($this->input->post());
+		/*
+		 * Loads the search view with the query results.
+		 */
 		$this->load->view('search_view',$data);
 	}
 }

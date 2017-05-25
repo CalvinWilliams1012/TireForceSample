@@ -6,9 +6,12 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
+<link rel = "stylesheet" type = "text/css" 
+   href = "<?php echo base_url(); ?>css/style.css">
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<!-- "Dynamic" title which can be changed in the controller. -->
 		<title><?php echo $title?></title>
 	</head>
 <body>
@@ -81,23 +84,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					echo '<option value="'.$body->body.'">'.$body->body.'</option>';
 				}
 				/*=====  End of Section body options  ======*/
-			?>
-		</select>
-	</div>
-	<div id="otherDiv">
-		<select name="otherSelect" id="otherSelect">
-			<option selected="true" disabled="true">Other</option>
-			<?php
-				/*=============================================
-				            Inserting a select
-							option for each value
-							grabbed from the database         
-				=============================================*/
-				foreach($others as $other)
-				{
-					echo '<option value="'.$others->other.'">'.$others->other.'</option>';
-				}
-				/*=====  End of Section other options  ======*/
 			?>
 		</select>
 	</div>

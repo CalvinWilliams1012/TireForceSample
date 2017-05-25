@@ -10,11 +10,11 @@ INSERT INTO tires VALUES(5,'TireBrand1','23 inches','XYZ42vf','TireBrand1 Descri
 /*
 Inserting vehicle data.
 */
-INSERT INTO vehicles VALUES(100,'2000','Make1','Model1','Body1','Additional information about 2000 Make1 Model1 Body1');
-INSERT INTO vehicles VALUES(101,'2012','Make2','Model2','Body1','Additional information about 2012 Make2 Model2 Body1');
-INSERT INTO vehicles VALUES(102,'1998','Make3','Model3','Body1','Additional information about 1998 Make3 Model3 Body1');
-INSERT INTO vehicles VALUES(103,'2010','Make4','Model4','Body1','Additional information about 2010 Make4 Model4 Body1');
-INSERT INTO vehicles VALUES(104,'2017','Make1','Model1','Body2','Additional information about 2017 Make1 Model1 Body2');
+INSERT INTO vehicles VALUES(100,'2000','Make1','Model1','Body1');
+INSERT INTO vehicles VALUES(101,'2012','Make2','Model2','Body1');
+INSERT INTO vehicles VALUES(102,'1998','Make3','Model3','Body1');
+INSERT INTO vehicles VALUES(103,'2010','Make4','Model4','Body1');
+INSERT INTO vehicles VALUES(104,'2017','Make1','Model1','Body2');
 
 /*
 Inserting relationship between tires and vehicles.

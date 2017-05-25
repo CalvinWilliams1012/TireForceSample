@@ -13,7 +13,6 @@ CREATE TABLE vehicles(
     make VARCHAR(20),
     model VARCHAR(20),
     body VARCHAR(20),
-    other VARCHAR(100),
     PRIMARY KEY (id)
 );
 

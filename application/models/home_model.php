@@ -12,10 +12,30 @@ class Home_model extends CI_Model {
 		parent::__construct();
 	}
 	
+	/*==========================================================================
+	=            Search function called on submit on the home page.            =
+	============================================================================*/
 	public function search($data)
 	{
+		/*----------  If all the wanted data is set   ----------*/
 		
+		if(isset($data['yearSelect']) &&
+			isset($data['makeSelect']) &&
+			isset($data['modelSelect']) &&
+			isset($data['bodySelect']))
+		{
+
+			/*----------  Inner join on associative table using the IN operator to get vehicle ID's to select the correct tires.----------*/
+			$query = $this->db->query("SELECT tireName,size,partNum,description,price FROM tires INNER JOIN tirevehicleref ON tires.id=tirevehicleref.tireID WHERE tirevehicleref.vehicleID IN (SELECT id FROM vehicles WHERE year='" . $data['yearSelect'] . "' AND make='" . $data['makeSelect'] . "' AND model='" . $data['modelSelect'] . "' AND body='" . $data['bodySelect'] . "');");
+			/*----------  Returning the result to the controller.  ----------*/
+			return $query->result();
+		}
 	}
+	
+	
+	/*=====  End of Section grabbing search results  ======*/
+	
+
 
 	/*=============================================
 	= 
@@ -53,14 +73,8 @@ class Home_model extends CI_Model {
 		$query = $this->db->query('SELECT DISTINCT body FROM vehicles ORDER BY body');
 		return $query->result();
 	}
-
-	public function getOthers()
-	{
-		$query = $this->db->query('SELECT DISTINCT other FROM vehicles ORDER BY other');
-		return $query->result();
-	}
 	
-	/*=====  End of Section grabbing data  ======*/
+	/*=====  End of Section grabbing data for select lists  ======*/
 	
 
 }

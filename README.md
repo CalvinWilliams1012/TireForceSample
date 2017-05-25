@@ -1,5 +1,7 @@
 # TireForce sample code
  This repo contains my test code created for TireForce.
+ This is a simple test program using basic MVC/CodeIgniter for a simple database php interaction.
+ Total time programming was give or take 5 hours.
 
 # Description
 
